@@ -1,13 +1,12 @@
-export default async function externalComponent(url) {
-  const name = url.split('/').reverse()[0].match(/^(.*?)\.umd/)[1]
+export default async function externalComponent(url: any): Promise<object> {
 
-  if (window[name]) return window[name]
+  if (window[url]) return window[url]
 
-  window[name] = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.async = true
     script.addEventListener('load', () => {
-      resolve(window[name])
+      resolve(window[url])
     })
     script.addEventListener('error', () => {
       reject(new Error(`Error loading ${url}`))
@@ -15,6 +14,4 @@ export default async function externalComponent(url) {
     script.src = url
     document.head.appendChild(script)
   })
-
-  return window[name]
 }
