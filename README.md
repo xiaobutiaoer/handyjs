@@ -16,3 +16,4 @@ c.externalComponent
 ```
 
 ## documention
+[文档](https://xiaobutiaoer.github.io/handyjs/modules.html)
