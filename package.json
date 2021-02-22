@@ -1,0 +1,36 @@
+{
+  "name": "@buera/handyjs",
+  "version": "1.0.0",
+  "description": "some utils for provide convenient",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.esm.js",
+  "scripts": {
+    "build": "rimraf lib/* && rollup -c",
+    "publish": "npm publish --access=public"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaobutiaoer/handyjs.git"
+  },
+  "keywords": [
+    "utils",
+    "js"
+  ],
+  "author": "buer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaobutiaoer/handyjs/issues"
+  },
+  "homepage": "https://github.com/xiaobutiaoer/handyjs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
